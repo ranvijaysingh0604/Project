@@ -1,0 +1,69 @@
+	
+    <html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                background-color: #FFB6C1;
+                overflow: hidden; /* Prevents scrolling */
+            }
+            #question {
+                text-align: center;
+                font-size: 2em;
+            }
+            .button {
+                display: inline-block;
+                margin: 1em;
+                padding: 0.5em 1em;
+                background-color: #FF69B4;
+                color: white;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #FF1493;
+            }
+            #teddy {
+                display: none;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                var noButton = document.getElementById('no');
+                noButton.onmouseover = noButton.ontouchstart = function() {
+                    this.style.position = 'absolute';
+                    this.style.left = Math.random() * (window.innerWidth - this.offsetWidth) + 'px';
+                    this.style.top = Math.random() * (window.innerHeight - this.offsetHeight) + 'px';
+                };
+                var yesButton = document.getElementById('yes');
+                yesButton.onclick = function() {
+                    document.getElementById('question').style.display = 'none';
+                    document.getElementById('teddy').style.display = 'block';
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div id="question">WHY WERE YOU STALKING MY PROFILE🤨🙄<br>
+            Do you like me?🤔
+            <br>
+            <span class="button" id="yes">Yes</span>
+            <span class="button" id="no">No</span>
+        </div>
+        <div id="teddy">
+            OMG🫠You convinced!!!😍😘 ^_^<br>
+            <img src="C:\Users\Ranvijay\OneDrive\Desktop\q.gif" alt="Cute Teddy"><br>I can't wait anymore😆😀
+            DM me ;)<br>
+            insta id - @ranvijaysingh0604<br>
+            love you >33<br>
+        </div>
+    </body>
+    </html>
+  
